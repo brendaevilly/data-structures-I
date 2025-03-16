@@ -1,3 +1,6 @@
+//Fazendo um losangulo.
+
+
 #include<stdio.h>
 #define MAX 100
 
@@ -44,6 +47,13 @@
             }
         }
 
+        if(quant % 2 != 0){
+            int meio = quant/2;
+                for(int j=0; j<quant; j++){
+                    matriz[meio][j] = 1;     
+                }
+        }
+
         //Matriz com cículo de 1s.
         for(int i=0; i<quant; i++){
             for(int j=0; j<quant; j++){
@@ -54,3 +64,4 @@
 
         return 0;
     }
+   

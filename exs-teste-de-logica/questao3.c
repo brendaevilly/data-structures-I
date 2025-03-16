@@ -23,11 +23,6 @@ int main() {
         }
     }
 
-    printf("\nVetor:\n");
-    for (int i = 0; i < tam; i++) {
-        printf("Vetor[%d]: %d\n", i, vetor[i]);
-    }
-
     int lConsult, cConsult;
     printf("\nLinha para consulta: ");
     scanf("%d", &lConsult);

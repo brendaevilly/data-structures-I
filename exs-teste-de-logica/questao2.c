@@ -2,7 +2,12 @@
 #include<stdlib.h>
 
     int main(){
-        int m = 3, n = 3;
+        int m, n;
+        printf("\nLinhas: ");
+        scanf("%d", &m);
+        printf("\nColunas: ");
+        scanf("%d", &n);
+        printf("\n");
         int matriz[m][n];
         int vetor[256] = {0};
 
@@ -18,7 +23,7 @@
 
         for(int i=0; i<256; i++){
             if(vetor[i] > 0){
-                printf("Frequencia: %d\n", vetor[i]);
+                printf("Frequencia do numero %d na matriz: %d\n", i, vetor[i]);
             }
         }
 
