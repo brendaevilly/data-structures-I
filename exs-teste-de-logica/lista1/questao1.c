@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<math.h>
 
 #define MAX 100
@@ -30,5 +31,6 @@
             printf("\n");
         }
 
+        system("PAUSE");
         return 0;
     }
