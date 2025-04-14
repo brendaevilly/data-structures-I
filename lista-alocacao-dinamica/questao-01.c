@@ -4,10 +4,8 @@
 	int numeroAusente(int *nums, int numsSize);
 
 	int main(){
-
 		int numsSize, *nums;
-        printf("\nIntervalo: ");
-		scanf("%d", &numsSize);
+        printf("\nIntervalo: "); scanf("%d", &numsSize);
 		nums = (int *)calloc(numsSize, sizeof(int));
 		
 		for(int i=0; i<numsSize; i++){
@@ -17,7 +15,6 @@
 			for(int j=0; j<i; j++){
 				if(nums[j] == nums[i] || nums[i] > numsSize || nums[i] < 0){
 					printf("\nEsse valor ja foi inserido no vetor ou não esta dentro do intervalo. Tente novamente.\n");
-					
 					nums[i] = 0;
 					i--;
 					break;
@@ -27,12 +24,14 @@
 
 		printf("\nNumero ausente: %d\n", numeroAusente(nums, numsSize));
 
+		free(nums);
+
 		return 0;
 	}
 
 	int numeroAusente(int *nums, int numsSize){
-		
 		int encontrado = 0;
+
 		for(int i=0; i<=numsSize; i++){
 			for(int j=0; j<numsSize; j++){
                 encontrado = 0;

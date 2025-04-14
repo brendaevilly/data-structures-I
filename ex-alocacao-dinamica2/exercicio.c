@@ -67,7 +67,7 @@ int main(){
     printf("\n--- MATRIZ ---\n");
     for(int i=0; i<x; i++){
         for(int j=0; j<y; j++){
-            printf("%d ", mat[i][j]);
+            printf("%d\t", mat[i][j]);
         }
         printf("\n");
     }
