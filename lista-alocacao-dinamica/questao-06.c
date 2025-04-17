@@ -8,6 +8,11 @@
         printf("Tamanho: "); scanf("%d", &tam); printf("\n");
         vet = (int *)malloc(tam*sizeof(int));
 
+        if(vet == NULL){
+			printf("Falha na alocacao de memoria!\n");
+			return 1;
+		}
+
         for(int i=0; i<tam; i++){
             printf("Vetor[%d]: ", i); scanf("%d", &vet[i]); printf("\n");
         }

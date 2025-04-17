@@ -39,6 +39,7 @@
     int **alocarMatriz(int n){
         int **mat;
         mat = (int **)malloc(n*sizeof(int*));
+
         for(int i=0; i<n; i++){
             mat[i] = (int *)malloc(n*sizeof(int));
         }

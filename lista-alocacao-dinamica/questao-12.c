@@ -36,7 +36,7 @@
     char **alocarStrings(int n, int possiveis){
         char **strings;
         strings = (char **)calloc(possiveis, sizeof(char*));
-
+        
         for(int i=0; i<possiveis; i++){
             strings[i] = (char *)calloc(n+1, sizeof(char));
             strings[i][n] = '\0';

@@ -37,6 +37,7 @@
         int **mat;
 
         mat = (int **)malloc(i*sizeof(int*));
+
         for(int lin=0; lin<i; lin++){
             mat[lin] = (int *)malloc(j*sizeof(int));
         }

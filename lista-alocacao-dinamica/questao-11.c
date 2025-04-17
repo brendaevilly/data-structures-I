@@ -36,8 +36,10 @@
     int **alocarTrianguloPascal(){
         int **tringuloPascal, linha = 1;
         tringuloPascal = (int **)calloc(12, sizeof(int*));
+
         for(int i=0; i<12; i++){
             tringuloPascal[i] = (int *)calloc(linha, sizeof(int));
+
             linha++;
         }
 

@@ -11,6 +11,11 @@
 
         vet1 = (int *)malloc(tam1*sizeof(int));
 
+        if(vet1 == NULL){
+			printf("Falha na alocacao de memoria!\n");
+			return 1;
+		}
+
         for(int i=0; i<tam1; i++){
             printf("Vetor [%d]: ", i);
             scanf("%d", &vet1[i]);
@@ -18,6 +23,11 @@
         }
 
         vet2 = (int *)malloc(tam2*sizeof(int));
+
+        if(vet2 == NULL){
+			printf("Falha na alocacao de memoria!\n");
+			return 1;
+		}
 
         for(int i=0; i<tam2; i++){
             printf("Vetor [%d]: ", i);

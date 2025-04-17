@@ -15,6 +15,11 @@
         Ataque *ataque;
         ataque = (Ataque *)malloc(n*sizeof(Ataque));
 
+        if(ataque == NULL){
+			printf("Falha na alocacao de memoria!\n");
+			return 1;
+		}
+
         for(int i=0; i<n; i++){
             printf("Dano do ataque %d: ", i); scanf("%d", &ataque[i].dano); printf("\n");
         }

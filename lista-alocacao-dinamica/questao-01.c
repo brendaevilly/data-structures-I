@@ -7,6 +7,11 @@
 		int numsSize, *nums;
         printf("\nIntervalo: "); scanf("%d", &numsSize);
 		nums = (int *)calloc(numsSize, sizeof(int));
+
+		if(nums == NULL){
+			printf("Falha na alocacao de memoria!\n");
+			return 1;
+		}
 		
 		for(int i=0; i<numsSize; i++){
             printf("\nInsira o numero: ");
@@ -14,7 +19,7 @@
 
 			for(int j=0; j<i; j++){
 				if(nums[j] == nums[i] || nums[i] > numsSize || nums[i] < 0){
-					printf("\nEsse valor ja foi inserido no vetor ou não esta dentro do intervalo. Tente novamente.\n");
+					printf("\nEsse valor ja foi inserido no vetor ou nao esta dentro do intervalo. Tente novamente.\n");
 					nums[i] = 0;
 					i--;
 					break;

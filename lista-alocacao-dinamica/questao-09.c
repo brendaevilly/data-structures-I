@@ -27,6 +27,7 @@
     int *transformaNumero(int a, int b, int *index){
         int *vet, op;
         vet = (int *)malloc(1*sizeof(int));
+
         vet[0] = a;
 
         while(1){
