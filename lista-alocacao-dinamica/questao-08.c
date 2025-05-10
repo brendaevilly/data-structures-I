@@ -29,7 +29,7 @@
             ataque[i].usavel = 1;
         }
 
-        int turno = 1, vidaChefe = h;
+        int turno = 1, vidaChefe = h, semDano = 0, limite = 50;
 
         while(vidaChefe > 0){
             int danoTurno = 0;
@@ -45,12 +45,23 @@
 
             printf("Turno: %d\nDano: %d\nVida do chefe: %d\n", turno, danoTurno, vidaChefe);
 
-            if(vidaChefe <= 0) break;
+            if(danoTurno == 0){
+                semDano++;
+                if(semDano >= limite){
+                    printf("O chefe nao pode ser derrotado.\n------ GAME OVER ------\n");
+                    break;
+                }
+            }else{
+                semDano = 0;
+            }
+
+            if(vidaChefe <= 0){
+                printf("Chefe derrotado no turno %d\n", turno);
+                break;  
+            } 
 
             turno++;
         }
-
-        printf("Chefe derrotado no turno %d\n", turno);
 
         free(ataque);
 
